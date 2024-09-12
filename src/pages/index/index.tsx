@@ -1,8 +1,11 @@
+import React from 'react'
 import { View, Text } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import './index.css'
 
-export default function Index () {
+interface IProps { }
+
+const Index: React.FC<IProps> = () => {
   useLoad(() => {
     console.log('Page loaded.')
   })
@@ -13,3 +16,5 @@ export default function Index () {
     </View>
   )
 }
+
+export default Index
