@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "sample",
-  "description": "sample",
+  "projectname": "taro-template-sky",
+  "description": "taro-template-sky",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
