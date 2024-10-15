@@ -1,15 +1,31 @@
 {
-  "miniprogramRoot": "./dist",
+  "miniprogramRoot": "",
   "projectname": "taro-template-sky",
   "description": "taro-template-sky",
-  "appid": "touristappid",
+  "appid": "wx0f011012e5bb4d62",
   "setting": {
     "urlCheck": true,
     "es6": false,
     "enhance": false,
     "compileHotReLoad": false,
-    "postcss": false,
-    "minified": false
+    "postcss": true,
+    "minified": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "uglifyFileName": true
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }
