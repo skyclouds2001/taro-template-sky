@@ -1,0 +1,30 @@
+{
+  "format": 2,
+  "compileType": "mini",
+  "miniprogramRoot": "./",
+  "compileOptions": {
+    "component2": false,
+    "typescript": false,
+    "less": false,
+    "treeShaking": false,
+    "resolveAlias": {},
+    "globalObjectMode": "enable",
+    "transpile": {
+      "script": {
+        "ignore": [
+          "**"
+        ]
+      }
+    }
+  },
+  "uploadExclude": [],
+  "assetsInclude": [],
+  "developOptions": {
+    "hotReload": true,
+    "parallel": true,
+    "sourcemap": true,
+    "minify": false,
+    "skipTranspile": true,
+    "lazyCompile": true
+  }
+}
