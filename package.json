@@ -2,7 +2,7 @@
   "name": "taro-template-sky",
   "version": "0.0.0",
   "private": true,
-  "description": "an opinionated taro starter template for react",
+  "description": "an opinionated taro starter template",
   "templateInfo": {
     "name": "default",
     "typescript": true,
