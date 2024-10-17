@@ -1,12 +1,13 @@
 import { defineConfig, type UserConfigExport } from '@tarojs/cli'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
 import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig<'vite'>(async (merge, { command, mode }) => {
-  const baseConfig: UserConfigExport<'vite'> = {
+export default defineConfig<'webpack5'>(async (merge) => {
+  const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'taro-template-sky',
-    date: '2024-9-9',
+    date: '2024-10-18',
     designWidth: 750,
     deviceRatio: {
       640: 2.34 / 2,
@@ -23,7 +24,10 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
       options: {},
     },
     framework: 'react',
-    compiler: 'vite',
+    compiler: 'webpack5',
+    cache: {
+      enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+    },
     mini: {
       postcss: {
         pxtransform: {
@@ -31,17 +35,24 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
           config: {},
         },
         cssModules: {
-          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
             namingPattern: 'module', // 转换模式，取值为 global/module
             generateScopedName: '[name]__[local]___[hash:base64:5]',
           },
         },
       },
+      webpackChain(chain) {
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+      },
     },
     h5: {
       publicPath: '/',
       staticDirectory: 'static',
+      output: {
+        filename: 'js/[name].[hash:8].js',
+        chunkFilename: 'js/[name].[chunkhash:8].js'
+      },
       miniCssExtractPluginOption: {
         ignoreOrder: true,
         filename: 'css/[name].[hash].css',
@@ -53,19 +64,22 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
           config: {},
         },
         cssModules: {
-          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
             namingPattern: 'module', // 转换模式，取值为 global/module
             generateScopedName: '[name]__[local]___[hash:base64:5]',
           },
         },
       },
+      webpackChain(chain) {
+        chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+      },
     },
     rn: {
       appName: 'taroDemo',
       postcss: {
         cssModules: {
-          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         },
       },
     },
