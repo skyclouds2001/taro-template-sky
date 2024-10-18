@@ -1,31 +1,99 @@
 {
+  "description": "an opinionated taro starter template",
   "miniprogramRoot": "",
-  "projectname": "taro-template-sky",
-  "description": "taro-template-sky",
-  "appid": "wx0f011012e5bb4d62",
+  "compileType": "miniprogram",
   "setting": {
-    "urlCheck": true,
+    "condition": true,
     "es6": false,
     "enhance": false,
+    "postcss": false,
+    "minified": false,
+    "minifyWXSS": false,
+    "minifyWXML": false,
+    "swc": false,
+    "uglifyFileName": true,
+    "ignoreUploadUnusedFiles": true,
+    "autoAudits": false,
+    "urlCheck": true,
     "compileHotReLoad": false,
-    "postcss": true,
-    "minified": true,
+    "preloadBackgroundData": true,
+    "lazyloadPlaceholderEnable": true,
+    "bigPackageSizeSupport": true,
+    "skylineRenderEnable": false,
     "babelSetting": {
       "ignore": [],
-      "disablePlugins": [],
       "outputPath": ""
     },
-    "uglifyFileName": true
+    "minifyWXMLSetting": {
+      "global": {
+        "collapseWhitespace": true,
+        "conservativeCollapse": false,
+        "preserveLineBreaks": true
+      }
+    },
+    "useCompilerPlugins": false,
+    "disableUseStrict": false,
+    "uploadWithSourceMap": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "coverView": true,
+    "ignoreDevUnusedFiles": false,
+    "ignoreCodeQuality": false,
+    "checkInvalidKey": true,
+    "showShadowRootInWxmlPanel": true,
+    "useIsolateContext": true,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "showES6CompileOption": true
   },
-  "compileType": "miniprogram",
   "libVersion": "latest",
+  "appid": "wx0f011012e5bb4d62",
+  "projectname": "taro-template-sky",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "skeletonConfig": {
+    "global": {
+      "loading": "spin",
+      "outline": {
+        "remain": false,
+        "replace": "none"
+      },
+      "text": {
+        "color": "#EEEEEE"
+      },
+      "image": {
+        "shape": "rect",
+        "color": "#EFEFEF",
+        "shapeOpposite": []
+      },
+      "button": {
+        "color": "#EFEFEF",
+        "excludes": []
+      },
+      "pseudo": {
+        "color": "#EFEFEF",
+        "shape": "circle",
+        "shapeOpposite": []
+      },
+      "excludes": [],
+      "remove": [],
+      "empty": [],
+      "hide": [],
+      "grayBlock": [],
+      "showNative": false,
+      "backgroundColor": "transparent",
+      "mode": "fullscreen",
+      "templateName": "skeleton",
+      "cssUnit": "rpx",
+      "decimal": 4
+    }
+  },
+  "condition": {}
 }
