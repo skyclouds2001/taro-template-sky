@@ -1,0 +1,24 @@
+{
+  "projectname": "taro-template-sky",
+  "miniprogramRoot": "./",
+  "setting": {
+    "es6": false,
+    "urlCheck": false,
+    "autoCompile": true,
+    "mockUpdate": false,
+    "scripts": false,
+    "mockLogin": true,
+    "compileHotReLoad": true,
+    "nativeCompile": false,
+    "IDEPreviewHotRestartCache": true,
+    "useCompilerPlugins": [],
+    "bigPackageSizeSupport": true,
+    "webDetect": false
+  },
+  "appid": "testAppId",
+  "disablePrivate": false,
+  "packOptions": {
+    "include": [],
+    "ignore": []
+  }
+}
