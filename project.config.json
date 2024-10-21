@@ -14,7 +14,7 @@
     "uglifyFileName": true,
     "ignoreUploadUnusedFiles": true,
     "autoAudits": false,
-    "urlCheck": true,
+    "urlCheck": false,
     "compileHotReLoad": false,
     "preloadBackgroundData": true,
     "lazyloadPlaceholderEnable": true,
@@ -54,6 +54,13 @@
     "ignore": [],
     "include": []
   },
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "watchOptions": {
+    "ignore": []
+  },
+  "scripts": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
